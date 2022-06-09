@@ -37,7 +37,7 @@ export const AppSchema: Application = {
       {
         id: 'text4',
         type: 'core/v1/text',
-        properties: { value: { raw: '虚拟机', format: 'plain' } },
+        properties: { value: { raw: 'Virtual Machine', format: 'plain' } },
         traits: [
           {
             type: 'core/v1/slot',

@@ -184,15 +184,15 @@ const app = {
           items: [
             {
               key: "user",
-              text: "用户",
+              text: "User",
             },
             {
               key: "user_group",
-              text: "用户组",
+              text: "User Group",
             },
             {
               key: "policy",
-              text: "策略",
+              text: "Policy",
             },
             {
               key: "ldap",
@@ -200,7 +200,7 @@ const app = {
             },
             {
               key: "settings",
-              text: "账号设置",
+              text: "Settings",
             },
           ],
         },
@@ -266,7 +266,7 @@ const app = {
         type: "core/v1/text",
         properties: {
           value: {
-            raw: "创建用户",
+            raw: "Create user",
             format: "plain",
           },
         },
@@ -330,7 +330,7 @@ const app = {
         type: "core/v1/text",
         properties: {
           value: {
-            raw: "更多操作",
+            raw: "More",
             format: "plain",
           },
         },

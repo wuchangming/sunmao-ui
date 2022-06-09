@@ -50,12 +50,12 @@ export const ApplicationFixture: Record<string, Application> = {
           properties: {
             data: '{{fetchUsers.fetch.data}}',
             columns: [
-              { key: 'username', title: '用户名', type: 'link' },
-              { key: 'job', title: '职位', type: 'text' },
-              { key: 'area', title: '地区', type: 'text' },
+              { key: 'username', title: 'Username', type: 'link' },
+              { key: 'job', title: 'Job', type: 'text' },
+              { key: 'area', title: 'Area', type: 'text' },
               {
                 key: 'createdTime',
-                title: '创建时间',
+                title: 'Created Time',
                 displayValue: "{{dayjs($listItem.createdTime).format('LL')}}",
               },
             ],
@@ -87,15 +87,15 @@ export const ApplicationFixture: Record<string, Application> = {
                     styleSlot: 'content',
                     style: "{{!usersTable.selectedItem ? 'display: none' : ''}}",
                   },
-                ]
-              }
+                ],
+              },
             },
           ],
         },
         {
           id: 'userInfoTitle',
           type: 'core/v1/text',
-          properties: { value: { raw: '**基本信息**', format: 'md' } },
+          properties: { value: { raw: '**Basic Info**', format: 'md' } },
           traits: [
             {
               type: 'core/v1/slot',
@@ -114,14 +114,16 @@ export const ApplicationFixture: Record<string, Application> = {
             },
             {
               type: 'core/v1/style',
-              properties: { styles: [{styleSlot: 'content', style: 'padding: 0; border: none' }]},
+              properties: {
+                styles: [{ styleSlot: 'content', style: 'padding: 0; border: none' }],
+              },
             },
           ],
         },
         {
           id: 'usernameLabel',
           type: 'core/v1/text',
-          properties: { value: { raw: '**用户名**', format: 'md' } },
+          properties: { value: { raw: '**UserName**', format: 'md' } },
           traits: [
             {
               type: 'core/v1/slot',
@@ -159,7 +161,7 @@ export const ApplicationFixture: Record<string, Application> = {
         {
           id: 'jobLabel',
           type: 'core/v1/text',
-          properties: { value: { raw: '**职位**', format: 'md' } },
+          properties: { value: { raw: '**Job**', format: 'md' } },
           traits: [
             {
               type: 'core/v1/slot',
@@ -178,14 +180,16 @@ export const ApplicationFixture: Record<string, Application> = {
             },
             {
               type: 'core/v1/style',
-              properties: { styles: [{styleSlot: 'content', style: 'padding: 0; border: none' }]},
+              properties: {
+                styles: [{ styleSlot: 'content', style: 'padding: 0; border: none' }],
+              },
             },
           ],
         },
         {
           id: 'areaLabel',
           type: 'core/v1/text',
-          properties: { value: { raw: '**地区**', format: 'md' } },
+          properties: { value: { raw: '**Area**', format: 'md' } },
           traits: [
             {
               type: 'core/v1/slot',
@@ -223,7 +227,7 @@ export const ApplicationFixture: Record<string, Application> = {
         {
           id: 'createdTimeLabel',
           type: 'core/v1/text',
-          properties: { value: { raw: '**创建时间**', format: 'md' } },
+          properties: { value: { raw: '**Created Time**', format: 'md' } },
           traits: [
             {
               type: 'core/v1/slot',
@@ -258,7 +262,9 @@ export const ApplicationFixture: Record<string, Application> = {
             },
             {
               type: 'core/v1/style',
-              properties: { styles: [{styleSlot: 'content', style: 'padding: 0; border: none' }]},
+              properties: {
+                styles: [{ styleSlot: 'content', style: 'padding: 0; border: none' }],
+              },
             },
           ],
         },
@@ -284,14 +290,16 @@ export const ApplicationFixture: Record<string, Application> = {
             },
             {
               type: 'core/v1/style',
-              properties: { styles: [{styleSlot: 'content', style: 'padding: 0; border: none' }]},
+              properties: {
+                styles: [{ styleSlot: 'content', style: 'padding: 0; border: none' }],
+              },
             },
           ],
         },
         {
           id: 'tabs1',
           type: 'chakra_ui/v1/tabs',
-          properties: { tabNames: ['用户信息', '角色'], initialSelectedTabIndex: 0 },
+          properties: { tabNames: ['User Info', 'Role'], initialSelectedTabIndex: 0 },
           traits: [
             {
               type: 'core/v1/slot',
@@ -313,7 +321,7 @@ export const ApplicationFixture: Record<string, Application> = {
         {
           id: 'testtext',
           type: 'core/v1/text',
-          properties: { value: { raw: '**测试角色**', format: 'md' } },
+          properties: { value: { raw: '**Test Role**', format: 'md' } },
           traits: [
             {
               type: 'core/v1/slot',
@@ -332,7 +340,9 @@ export const ApplicationFixture: Record<string, Application> = {
             },
             {
               type: 'core/v1/style',
-              properties: { styles: [{styleSlot: 'content', style: 'padding: 0; border: none' }]},
+              properties: {
+                styles: [{ styleSlot: 'content', style: 'padding: 0; border: none' }],
+              },
             },
           ],
         },
