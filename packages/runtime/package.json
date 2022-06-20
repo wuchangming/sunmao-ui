@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@emotion/css": "^11.7.1",
-    "@sinclair/typebox": "^0.21.2",
+    "@sinclair/typebox": "0.21.2",
     "@sunmao-ui/core": "^0.7.0",
     "@sunmao-ui/shared": "^0.2.0",
     "@vue/reactivity": "^3.1.5",
@@ -74,7 +74,7 @@
   },
   "peerDependencies": {
     "@emotion/css": "^11.7.1",
-    "@sinclair/typebox": "^0.21.2",
+    "@sinclair/typebox": "0.21.2",
     "@sunmao-ui/core": "^0.6.0",
     "@sunmao-ui/shared": "^0.1.0",
     "immer": "^9.0.12",
