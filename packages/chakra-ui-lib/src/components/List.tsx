@@ -65,7 +65,7 @@ export default implementRuntimeComponent({
       [LIST_ITEM_INDEX_EXP]: i,
     };
     const listItemEle = (
-      <BaseListItem key={listItem.id} spacing={3}>
+      <BaseListItem key={listItem.id}>
         <ModuleRenderer
           id={template.id}
           type={template.type}

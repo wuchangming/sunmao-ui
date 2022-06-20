@@ -3,9 +3,12 @@ import { implementRuntimeComponent } from '@sunmao-ui/runtime';
 import { css, cx } from '@emotion/css';
 import { Type } from '@sinclair/typebox';
 import { FALLBACK_METADATA } from '../sunmao-helper';
+import { StringUnion } from '@sunmao-ui/shared';
+
+const IconsType = Object.keys(Icons);
 
 const IconPropsSpec = Type.Object({
-  name: Type.KeyOf(Type.Object(Icons as Record<keyof typeof Icons, any>), {
+  name: StringUnion(IconsType, {
     title: 'Name',
   }),
   spin: Type.Boolean({
@@ -37,7 +40,7 @@ export const Icon = implementRuntimeComponent({
   },
 })(props => {
   const { elementRef, name, spin, customStyle } = props;
-  const _Icon = Icons[name];
+  const _Icon = Icons[name as keyof typeof Icons];
 
   return <_Icon ref={elementRef} className={cx(css(customStyle?.content))} spin={spin} />;
 });

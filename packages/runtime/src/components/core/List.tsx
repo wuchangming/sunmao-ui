@@ -43,9 +43,9 @@ export default implementRuntimeComponent({
       },
     },
     styleSlots: ['content'],
-    events: [],
+    events: ['onClick'],
   },
-})(({ listData, component, app, services, customStyle, elementRef }) => {
+})(({ listData, component, app, callbackMap, services, customStyle, elementRef }) => {
   if (!listData) {
     return null;
   }
@@ -104,6 +104,7 @@ export default implementRuntimeComponent({
         list-style: none;
         ${customStyle?.content}
       `}
+      onClick={() => callbackMap?.onClick?.()}
       ref={elementRef}
     >
       {listItems}

@@ -20,14 +20,14 @@ const DatePickerStateSpec = Type.Object({
   dateString: Type.Union([Type.Array(Type.String()), Type.String()]),
 });
 
-const DatePickerType = {
+const DatePickerType: Record<string, any> = {
   month: BaseDatePicker.MonthPicker,
   year: BaseDatePicker.YearPicker,
   week: BaseDatePicker.WeekPicker,
   quarter: BaseDatePicker.QuarterPicker,
   date: BaseDatePicker,
 };
-const RangePicker = BaseDatePicker.RangePicker;
+const RangePicker = BaseDatePicker.RangePicker as any;
 
 const exampleProperties: Static<typeof DatePickerPropsSpec> = {
   disabled: false,
@@ -141,7 +141,7 @@ export const DatePicker = implementRuntimeComponent({
       {range ? (
         <RangePicker
           {...pickerProps}
-          disabledTime={(date, type) =>
+          disabledTime={(date: any, type: any) =>
             getDisabledRangeTime(date, type, disabledRangeTime!)
           }
           mode={type}
@@ -152,8 +152,8 @@ export const DatePicker = implementRuntimeComponent({
       ) : (
         <Picker
           {...pickerProps}
-          disabledTime={date => getDisabledTime(date, disabledTime)}
-          disabledDate={current => getDisabledDate(current, disabledDate)}
+          disabledTime={(date: any) => getDisabledTime(date, disabledTime)}
+          disabledDate={(current: any) => getDisabledDate(current, disabledDate)}
         />
       )}
     </span>

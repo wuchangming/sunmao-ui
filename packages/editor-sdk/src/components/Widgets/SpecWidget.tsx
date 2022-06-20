@@ -196,7 +196,8 @@ export const SpecWidget: React.FC<Props> = props => {
   } else {
     console.info('Found unsupported spec', spec);
   }
-
+  // TODO
+  const ButtonComponent = Component as any;
   return (
     <DefaultTemplate
       label={label}
@@ -214,7 +215,7 @@ export const SpecWidget: React.FC<Props> = props => {
               flex={spec.type === 'boolean' && isExpression === false ? '' : 1}
               maxWidth="100%"
             >
-              <Component
+              <ButtonComponent
                 component={component}
                 spec={
                   isExpression

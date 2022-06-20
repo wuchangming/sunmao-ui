@@ -43,7 +43,7 @@ const exampleProperties: Static<typeof TimePickerPropsSpec> = {
   utcOffset: 0,
   timezone: '',
 };
-const RangePicker = BaseTimePicker.RangePicker;
+const RangePicker = BaseTimePicker.RangePicker as any;
 
 export const TimePicker = implementRuntimeComponent({
   version: 'arco/v1',
@@ -93,7 +93,7 @@ export const TimePicker = implementRuntimeComponent({
     ...getDisabledTime(disabledTime),
     ...cProps,
   };
-
+  const _BaseTimePicker = BaseTimePicker as any;
   return (
     <span ref={elementRef} className={css(customStyle?.content)}>
       {range ? (
@@ -103,7 +103,7 @@ export const TimePicker = implementRuntimeComponent({
           placeholder={rangePlaceholder}
         />
       ) : (
-        <BaseTimePicker {...pickerProps} />
+        <_BaseTimePicker {...pickerProps} />
       )}
     </span>
   );
